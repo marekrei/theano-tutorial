@@ -41,10 +41,9 @@ class Classifier(object):
         cost += l2_regularisation * (theano.tensor.sqr(W_hidden).sum() + theano.tensor.sqr(W_output).sum())
 
         # calculating gradient descent updates based on the cost function
-        gradients = theano.tensor.grad(cost, [W_hidden, W_output], disconnected_inputs='warn')
-        W_hidden_updated = W_hidden - (learningrate * gradients[0])
-        W_output_updated = W_output - (learningrate * gradients[1])
-        updates = [(W_hidden, W_hidden_updated), (W_output, W_output_updated)]
+        params = [W_hidden, W_output]
+        gradients = theano.tensor.grad(cost, params)
+        updates = [(p, p - (learningrate * g)) for p, g in zip(params, gradients)]
 
         # defining Theano functions for training and testing the network
         self.train = theano.function([input_vector, target_value, learningrate], [cost, predicted_value], updates=updates, allow_input_downcast=True)
