@@ -64,6 +64,7 @@ The label is 1 if the GDP is more than average, and 0 otherwise.
 
 
 Run with:
+
 	python classifier.py data/countries-classify-gdp-normalised.train.txt data/countries-classify-gdp-normalised.test.txt
 
 The script will print information about 10 training epochs and the result on the test set:
