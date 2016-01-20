@@ -66,7 +66,7 @@ class RnnClassifier(object):
             cost += l2_regularisation * (theano.tensor.sqr(m).sum())
 
         # calculating gradient descent updates based on the cost function
-        gradients = theano.tensor.grad(cost, self.params.values(), disconnected_inputs='warn')
+        gradients = theano.tensor.grad(cost, self.params.values())
         updates = [(p, p - (learningrate * g)) for p, g in zip(self.params.values(), gradients)]
 
         # defining Theano functions for training and testing the network
