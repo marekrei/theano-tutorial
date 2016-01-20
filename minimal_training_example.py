@@ -15,5 +15,5 @@ updates = [(W, W_updated)]
 f = theano.function([x, target], y, updates=updates)
 
 for i in xrange(10):
-	output = f([1.0, 1.0], 20.0)
-	print output
+    output = f([1.0, 1.0], 20.0)
+    print output
