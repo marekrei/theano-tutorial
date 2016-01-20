@@ -109,7 +109,7 @@ The code will train for 3 passes over the training data, and will then print per
 	Epoch: 2	Cost: 18020.619533	Accuracy: 0.429073033708
 	Test_cost: 4784.25137484	Test_accuracy: 0.388235294118
 
-The accuracy on the test set is about 38%, which isn't a great result. But it is quite a difficult task - the current state-of-the-art system ([Tai ei al., 2015](https://aclweb.org/anthology/P/P15/P15-1150.pdf)) achieves 50.9% accuracy, using a large amount of additional phrase-level annotations, and a much bigger network based on LSTMs and parse trees.
+The accuracy on the test set is about 38%, which isn't a great result. But it is quite a difficult task - the current state-of-the-art system ([Tai ei al., 2015](https://aclweb.org/anthology/P/P15/P15-1150.pdf)) achieves 50.9% accuracy, using a large amount of additional phrase-level annotations, and a much bigger network based on LSTMs and parse trees. As there are 5 classes to choose from, a random system would get 20% accuracy.
 
 
 
