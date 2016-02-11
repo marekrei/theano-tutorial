@@ -1,6 +1,7 @@
-Theano tutorial (sample code)
+Theano tutorial
 ==========================
 
+This repository contains contains code examples for the Theano tutorial at [http://www.marekrei.com/blog/theano-tutorial/](http://www.marekrei.com/blog/theano-tutorial/)
 
 Minimal Working Example
 --------------------------
@@ -105,10 +106,10 @@ Now we can run the classifier with:
 
 The code will train for 3 passes over the training data, and will then print performance on the test data. 
 
-	Epoch: 0	Cost: 25937.7372292	Accuracy: 0.285814606742
-	Epoch: 1	Cost: 21656.820174	Accuracy: 0.350655430712
-	Epoch: 2	Cost: 18020.619533	Accuracy: 0.429073033708
-	Test_cost: 4784.25137484	Test_accuracy: 0.388235294118
+	Epoch: 0	Cost: 25929.9481023	Accuracy: 0.286633895131
+	Epoch: 1	Cost: 21541.7328736	Accuracy: 0.35779494382
+	Epoch: 2	Cost: 17857.7320117	Accuracy: 0.443586142322
+	Test_cost: 4934.24376649	Test_accuracy: 0.349773755656
 
 The accuracy on the test set is about 38%, which isn't a great result. But it is quite a difficult task - the current state-of-the-art system ([Tai ei al., 2015](https://aclweb.org/anthology/P/P15/P15-1150.pdf)) achieves 50.9% accuracy, using a large amount of additional phrase-level annotations, and a much bigger network based on LSTMs and parse trees. As there are 5 classes to choose from, a random system would get 20% accuracy.
 
