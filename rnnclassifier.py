@@ -38,7 +38,7 @@ class RnnClassifier(object):
             r = _slice(m, 0, 2)
             z = _slice(m, 1, 2)
             _h = theano.tensor.tanh(theano.tensor.dot(x, W_xh) + theano.tensor.dot(r * h_prev, W_hh))
-            h = (1.0 - z) * h_prev + z * _h
+            h = z * h_prev + (1.0 - z) * _h
             return h
 
         W_xm = self.create_parameter_matrix('W_xm', (word_embedding_size, recurrent_size*2))
